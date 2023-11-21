@@ -1,0 +1,42 @@
+<!-- verification/templates/verification/verification_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticity Verification</title>
+</head>
+<body>
+
+<form id="verificationForm">
+    {% csrf_token %}
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="serial_key">Serial Key:</label>
+    <input type="text" id="serial_key" name="serial_key" required><br>
+
+    <button type="button" onclick="verifyAuthenticity()">Verify Authenticity</button>
+</form>
+
+<script>
+function verifyAuthenticity() {
+    var form = document.getElementById('verificationForm');
+    var formData = new FormData(form);
+
+    fetch('/verification/verify-authenticity/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.result);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>
+
+</body>
+</html>
