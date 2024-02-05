@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+        <title>Hungry Wolf</title>
+    </head>
+    <body>
+        <div class="splash-screen">
+            <img class="splash-image" src="{% static 'verification/img/loading.jpg' %}">
+            <p>Loading...</p>
+        </div>
+        <div class="overlay">
+            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+        </div>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                     
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">New Arrival</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow">Product-Authentication</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div>
+                        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="home__img">
+                    </div>
+                    
+                    <div class="home__data">
+                        <div class="home__header">
+                            <h1 class="home__title">Hungry</h1>
+                            <h2 class="home__subtitle">Wolf</h2>
+                        </div>
+
+                        <div class="home__footer">
+                            <h3 class="home__title-description">Overview</h3>
+                            <p class="home__description">Join the Hungry Wolf community today, and let's strive for strength, knowledge, and safety together.
+                            </p>
+                            <a href="#" class="button button--flex">
+                                <span class="button--flex">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </span>
+                                <span class="home__price">View</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--=============== CASE ===============-->
+            <section class="case section grid" id="new">
+                <h2 class="section__title section__title-gradient">New Arrival</h2>
+
+                <div class="case__container container grid">
+                    <div>
+                        <img src="{% static 'verification/assets/img/demo.jpg' %}" alt="" class="case__img">
+                    </div>
+
+                    <div class="case__data">
+                        <p class="case__description">we understand the significance of anabolic hormones in various fields including 
+                            pharmaceuticals, sports performance enhancement, and medical research. Our team of experts, consisting of scientists, researchers, and industry professionals, 
+                            collaborates tirelessly to develop innovative and safe solutions that meet the ever-evolving needs of our clients.
+                        </p>
+                        <a href="#" class="button button--flex">
+                            <i class="ri-information-line button__icon"></i> More info
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== DISCOUNT 
+            <section class="discount section">
+                <div class="discount__container container grid">
+                    <div class="discount__animate">
+                        <h2 class="discount__title">Immerse yourself in <br> your music</h2>
+                        <p class="discount__description">Get it now, up to 50% off.</p>
+                        <a href="#" class="button button--flex">
+                            <i class="ri-shopping-bag-line button__icon"></i> Shop Now
+                        </a>
+                    </div>
+                    <img src="{% static 'verification/assets/img/discount.png' %}" alt="" class="discount__img">
+                </div>
+            </section>===============-->
+
+            <!--=============== PRODUCTS ===============-->
+            <section class="products section" id="products">
+                <h2 class="section__title section__title-gradient products__line">
+                    Choose <br> Your Products
+                </h2>
+
+                <div class="products__container container grid">
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/dinabol.jpg' %}" alt="" class="products__img">
+    
+                            <h3 class="products__title">Dianabol</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:dianabol' %}">
+                                <button class="button button--flex products__button" id="1">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/Anavar.jpg' %}" alt="" class="products__img">
+    
+                            <h3 class="products__title">Anavar</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:anavar' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/win.jpg' %}" alt="" class="products__img">
+    
+                            <h3 class="products__title">Winstrol</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:winr' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/Clen.jpg' %}" alt="" class="products__img">
+    
+                            <h3 class="products__title">Clenbuterol</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:clen' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/Anadrol.jpg' %}" alt="" class="products__img">
+    
+                            <h3 class="products__title">Anadrol 50</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:anadrol' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line scrollup__icon"></i>
+        </a>
+        
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'verification/assets/js/main.js' %}"></script>
+        <script>
+            // Simulate a delay (e.g., 3 seconds) to show the splash screen
+            setTimeout(function() {
+                document.querySelector('.splash-screen').style.display = 'none';
+                document.body.style.overflow = 'auto'; // Allow scrolling after splash screen
+            }, 3000);
+        </script>
+    </body>
+</html>

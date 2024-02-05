@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+     
+        <title>Hungry Wolf</title>
+    </head>
+<body>
+    <div class="overlay">
+        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'verification:homepage' %}" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#despid" class="nav__link">Product Description</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow">Product-Authentication</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div>
+                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="home__img">
+                </div>
+                
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title">CLEN</h1>
+                        <h2 class="home__subtitle">(Clenbuterol)</h2>
+                    </div>
+
+                    <div class="home__footer">
+                        <h3 class="home__title-description">Overview</h3>
+                        <p class="home__description">Clenbuterol (Spiropent) is a beta-receptor agonist drug used in the treatment of asthma and in bodybuilding for the purpose of fat loss.
+                             In some instances, it can also be used to enhance performance in endurance exercise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description">
+            <div class="desp">Description</div>
+            <div class="desp-title"><h3>Packaging: 100 capsules in a sealed box.</h3>
+                <h3>Dosage & administration:</h3>
+            </div>
+            <div class="desp-table">
+              <div class="table-left">
+                <h4>Half life :</h4>
+                <h4>Dose :</h4>
+                <h4>Average Cycle Length:</h4>
+                <h4>Anabolic #:</h4>
+                <h4>Androgenic #:</h4>
+                <h4>Oral Bioavailability:</h4>
+                <h4>CAS Name:</h4>
+                <h4>Synonyms:</h4>
+              </div>
+              <div class="table-right">
+                <p>36 hours</p>
+                <p>10-40mg per day</p>
+                <p>40 - 180mcg per day or as required - it's typical to cycle clenbuterol on a 5 day on 2 day off and repeat</p>
+                <p>n/a</p>
+                <p>n/a</p>
+                <p>Estimated at 90%</p>
+                <p>(RS)-1-(4-amino-3,5-dichlorophenyl)-2-(tert-butylamino)ethanol</p>
+                <p>Clenbuterol, Clen, Spiropent</p>
+              </div>
+            </div>
+        </section>
+        <section class="paragraph  section" id="despid">
+            <div class="para">
+                <h2>When to use clenbuterol</h2>
+                <p>Clenbuterol should only be used when fat loss needs to be particularly accelerated over a relatively short period of time. For example, 
+                    if the need or intent is to lose only 1 lb of fat per week, then there are better means to do this than to use clenbuterol. Where fat loss efforts are already maximized or near-maximized, however, 
+                    clenbuterol use can add perhaps another 1 lb per week to the rate of loss.</p>
+            </div>
+            <div class="para">
+                <h2>Dosage and cycling of clenbuterol</h2>
+                <p>The effective dose range of clenbuterol extends from 20 mcg/day as a minimum value to 40-140 mcg/day as more common values. 
+                    I think it best to start at 40 mcg/day and evaluate results on an ongoing basis, increasing dose by 20 mcg at a time as necessary. 
+                    Many users adjust dosage to the level where the hands begin to shake,
+                     but fat loss can be improved markedly with doses well below this point.</p>
+            </div>
+            <div class="para">
+                <p>Clenbuterol should be cycled rather than used continuously or for prolonged periods of time, 
+                    but no exact cycling pattern is necessary. 
+                    Period of use is typically from 2 to 8 weeks.</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'verification/assets/js/main.js' %}"></script>
+</body>
+</html>

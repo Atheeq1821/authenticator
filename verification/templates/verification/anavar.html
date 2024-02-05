@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+     
+        <title>Hungry Wolf</title>
+    </head>
+<body>
+    <div class="overlay">
+        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'verification:homepage' %}" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#despid" class="nav__link">Product Description</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow">Product-Authentication</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div>
+                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="home__img">
+                </div>
+                
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title">Anavar</h1>
+                        <h2 class="home__subtitle">(Oxandrolone)</h2>
+                    </div>
+
+                    <div class="home__footer">
+                        <h3 class="home__title-description">Overview</h3>
+                        <p class="home__description">Oxandrolone is a 17-alpha-alkylated oral anabolic steroid. 
+                            Oxandrolone has an excellent myotrophic activity index of 3.2 and a low androgenic activity index of 0.2. At low doses, 
+                            Oxandrolone will not cause suppression of endogenous testosterone production and does not aromatize to estrogen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description">
+            <div class="desp">Description</div>
+            <div class="desp-title"><h3>Packaging: 100 capsules in a sealed box.</h3>
+                <h3>Dosage & administration:</h3>
+            </div>
+            <div class="desp-table">
+              <div class="table-left">
+                <h4>Half life :</h4>
+                <h4>Dose :</h4>
+                <h4>Average Cycle Length:</h4>
+                <h4>Anabolic #:</h4>
+                <h4>Androgenic #:</h4>
+                <h4>Oral Bioavailability:</h4>
+                <h4>CAS Name:</h4>
+                <h4>Synonyms:</h4>
+              </div>
+              <div class="table-right">
+                <p>6 hours</p>
+                <p>10-200mg per day or as required</p>
+                <p>Any length - here are no side effects, aromatisation or toxicity with this compound.</p>
+                <p>322</p>
+                <p>630:24</p>
+                <p>Estimated at 97%</p>
+                <p>(5a,17b)-17-Hydroxy-17-methyl-2-oxaandrostan-3-one</p>
+                <p>The female steroid, Var, Annies, Anavar</p>
+              </div>
+            </div>
+        </section>
+        <section class="paragraph  section" id="despid">
+            <div class="para">
+                <h2>Oxandrolone: Versatile Medical Applications and Positive Outcomes</h2>
+                <p>Oxandrolone was approved for treating alcoholic hepatitis, Turner's syndrome, and weight loss caused by HIV. 
+                    In addition, the drug has shown positive results in treating anemia and hereditary angioedema and for preserving muscle mass in burns patients. Oxandronolne also has been used with good success for idiopathic muscle mass loss and osteoporosis.
+                     At low dose (5-10mg), Oxandrolone binds weakly to androgen receptors and therefore can be used by woman and does not cause virilisation.</p>
+            </div>
+            <div class="para">
+                <h2>Skin Conditioning and Post-Cycle Benefits of Oxandrolone</h2>
+                <p>Oxandrolone is an excellent compound for females and pre competition body builders requiring advanced skin conditioning. As a muscle building drug for men,
+                     its relatively useless - a far better option in that regard is either Tbol or Superdrol, which are considered to be ‘Anavar for men’. However, its worth noting the two particularly superb effects of Oxandrolone, first is the positive effects it has on the rejuvenation of the skin,
+                     wound healing, stretch mark reduction and burns treatment and the second its role in post cycle AAS therapy since it offers no aromatisation and is weak enough not interfere with the bodies testosterone recovery.</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'verification/assets/js/main.js' %}"></script>
+</body>
+</html>
