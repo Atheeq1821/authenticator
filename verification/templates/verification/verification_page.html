@@ -2,73 +2,29 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authenticity Verification</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+        <title>Hungry Wolf</title>
+    </head>
 <style>
     *{
         margin: 0;
         padding: 0;
         color: #ffffff;
-    }
-    .splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: #000000;
-            font-size: 24px;
-            z-index: 1000; /* Ensure it's above other elements */
-        }
-        
-        .splash-image {
-            max-width: 20%;
-            max-height: 20%;
-            border-radius: 8px;
-        }
-        
-
-        header {
-            background-color: #ffffff;
-            color: #fff;
-            display: flex;
-            padding: 20px;
-            text-align: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-         .logo {
-            max-width: 70px;
-            height: auto;
-           
-            text-align: center;
-        }
-
-
-        nav {
-            background-color: #000000;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    }  
         body{
-            background: url("{% static 'verification/bodyBg.jpg' %}");
-            background-size: cover;
+            background-color: #0F0F10;
         }
         form {
             background-color: #ffffff;
@@ -76,7 +32,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(61, 55, 55, 0.1);
             width: 300px;
-            
+            z-index: 0;
             margin: 200px auto; /* Center the form */
         }
         form h1{
@@ -93,7 +49,11 @@
             padding: 8px;
             margin-bottom: 16px;
             box-sizing: border-box;
+            border: 1px solid #00000048;
             color: #000000;
+        }
+        .input:focus{
+            border: 1px solid #000000;
         }
 
         button {
@@ -111,30 +71,46 @@
 
 </style>
 <body>
-    <div class="splash-screen">
-        <img class="splash-image" src="{% static 'verification/loading.png' %}">
-        <p>Loading...</p>
+    <div class="overlay">
+        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
     </div>
-
 <!-- Main content -->
-<header>
-    <img class="logo"  src="{% static 'verification/loading.png' %}" alt="Logo Before Heading">
-    
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="{% url 'verification:homepage' %}" class="nav__link active-link">Home</a>
+                </li>
+            
+                <li class="nav__item">
+                    <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow" style="text-decoration:underline; color: rgb(212, 49, 20);">Product-Authentication</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-function-line"></i>
+        </div>
+    </nav>
 </header>
 
 <!-- Navigation -->
-<nav>
-    <a href="{% url 'verification:homepage' %}">Home</a>
-    <a href="#">Product</a>
-    <a href="#">Aboout us</a>
-    <a href="{% url 'verification:verify_authenticity' %}">Product-Authenticity</a>
-</nav>
+
 
 <form id="verificationForm">
     {% csrf_token %}
     <h1>Product Authenticator</h1>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
+    <label for="Phone_Number">Phone Number:</label>
+    <input type="Phone_Number" id="Phone_Number" name="Phone_Number" required><br>
 
     <label for="serial_key">Serial Key:</label>
     <input type="text" id="serial_key" name="serial_key" required><br>

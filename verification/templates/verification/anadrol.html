@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+     
+        <title>Hungry Wolf</title>
+    </head>
+<body>
+    <div class="overlay">
+        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'verification:homepage' %}" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#despid" class="nav__link">Product Description</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow">Product-Authentication</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div>
+                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="home__img">
+                </div>
+                
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title" style=" font-size: 4em ">Anadrol 50</h1>
+                        <h2 class="home__subtitle">(Oxymetholone)</h2>
+                    </div>
+
+                    <div class="home__footer">
+                        <h3 class="home__title-description">Overview</h3>
+                        <p class="home__description">
+                            Anadrol 50 (Oxymetholone) is a potent oral anabolic steroid, commonly used to treat conditions like anemia and muscle wasting.
+                             Known for its ability to boost red blood cell production, it enhances oxygen transport in the body. While athletes use it to promote muscle growth, 
+                            caution is advised due to potential side effects associated with its use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description">
+            <div class="desp">Description</div>
+            <div class="desp-title"><h3>Packaging: 100 capsules in a sealed box.</h3>
+                <h3>Dosage & administration:</h3>
+            </div>
+            <div class="desp-table">
+              <div class="table-left">
+                <h4>Half life :</h4>
+                <h4>Dose :</h4>
+                <h4>Average Cycle Length:</h4>
+                <h4>Anabolic #:</h4>
+                <h4>Androgenic #:</h4>
+                <h4>Oral Bioavailability:</h4>
+                <h4>Synonyms:</h4>
+              </div>
+              <div class="table-right">
+                <p>8 hours</p>
+                <p>10-100mg per day or as required</p>
+                <p>4 to 6 weeks</p>
+                <p>320</p>
+                <p>45</p>
+                <p>Estimated at 95%</p>
+                <p>Anadrol, Drol, Oxo</p>
+              </div>
+            </div>
+        </section>
+        <section class="paragraph  section" id="despid">
+            <div class="para">
+                <p>Oxymetholone is a 17-alpha-alkylated oral anabolic-androgenic steroid. Oxymetholone is very effective in promoting muscle gains and has an excellent myotrophic activity index of 3.2 and is similar to testosterone with an androgenic activity index of 0.45. Main clinical uses include: osteoporosis, 
+                    anemia, as well as stimulating muscle growth in undernourished or underdeveloped patients. </p>
+            </div>
+            <div class="para">
+                <p> Oxymetholone has been studied for the treatment of HIV-associated wasting, anti-thrombin III deficiency, pediatric growth impairment, and damaged myocardium, with varying degrees of success. 
+                    Oxymetholone is one of the most powerful muscle building steroids available but the quality of the muscle built and the overall appearance of the user while running this compound is poor and its best suited to power lifting, strength based applications.</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'verification/assets/js/main.js' %}"></script>
+</body>
+</html>

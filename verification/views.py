@@ -44,4 +44,14 @@ def verify_authenticity(request):
 
     return render(request, 'verification/verification_page.html')
 def homepage(request):
-    return render(request, 'verification/home.html')
+    return render(request, 'verification/homepage.html')
+def dianabol(request):
+    return render(request,'verification/dianabol.html')
+def anavar(request):
+    return render(request,'verification/anavar.html')
+def clen(request):
+    return render(request,'verification/clen.html')
+def winr(request):
+    return render(request,'verification/winr.html')
+def anadrol(request):
+    return render(request,'verification/anadrol.html')

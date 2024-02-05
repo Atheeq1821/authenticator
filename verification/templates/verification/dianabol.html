@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
+     
+        <title>Hungry Wolf</title>
+    </head>
+<body>
+    <div class="overlay">
+        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+    </div>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{% url 'verification:homepage' %}" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#despid" class="nav__link">Product Description</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{% url 'verification:verify_authenticity' %}" class="nav__link glow">Product-Authentication</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div>
+                    <img src="{% static 'verification/assets/img/dinabol.jpg' %}" alt="" class="home__img">
+                </div>
+                
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title">DBOL</h1>
+                        <h2 class="home__subtitle">(Dianabol)</h2>
+                    </div>
+
+                    <div class="home__footer">
+                        <h3 class="home__title-description">Overview</h3>
+                        <p class="home__description">Dianabol (methandrostenolone, methandienone) has been one of the most important anabolic steroids in bodybuilding ever since its introduction in 1958, 
+                            some worth to mention effects of this steroid is it helps build muscle fast and acts as a weight loss supplement. Also commonly known as “Dbol”, 
+                            this oral compound is best used for steroid cycles in combination with injectable steroids but can be of value used alone as well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description">
+            <div class="desp">Description</div>
+            <div class="desp-title"><h3>Packaging: 100 capsules in a sealed box.</h3>
+                <h3>Dosage & administration:</h3>
+            </div>
+            <div class="desp-table">
+              <div class="table-left">
+                <h4>Half life :</h4>
+                <h4>Dose :</h4>
+                <h4>Average Cycle Length:</h4>
+                <h4>Anabolic #:</h4>
+                <h4>Androgenic #:</h4>
+                <h4>Oral Bioavailability:</h4>
+                <h4>CAS Name:</h4>
+                <h4>Synonyms:</h4>
+              </div>
+              <div class="table-right">
+                <p>6 hours</p>
+                <p>10-200mg per day or as required</p>
+                <p>2 to 6 weeks</p>
+                <p>210</p>
+                <p>40-60</p>
+                <p>Estimated at 85%</p>
+                <p>(17b)-17-Hydroxy-17-methylandrosta-1,4-dien-3-one</p>
+                <p>Methandrostenolone, Dianabol, Obol, Averbol, Danabol</p>
+              </div>
+            </div>
+        </section>
+        <section class="paragraph  section" id="despid">
+            <div class="para">
+                <h2>Stacking Dianabol with Injectable Steroids</h2>
+                <p>The effect of most injectable anabolic steroids is greatly enhanced by the addition of Dianabol which helps build muscle fast. The improvement is greater than from simply increasing the amount of injectable by the same amount. A classic and dramatic example is trenbolone. Though the total amount of steroid used is the same in all three cases, 50 mg/day each of trenbolone acetate stacked with 50 mg/day Dianabol provides a far more effective steroid cycle than either 100 mg/day of trenbolone acetate alone or 100 mg/day Dbol alone. The side effect profile is superior as well. In other words, the compounds act synergistically: 
+                    the whole is greater than the parts. This is likely due to different mechanisms of action.</p>
+            </div>
+            <div class="para">
+                <h2>Dianabol and Testosterone Stack</h2>
+                <p>All injectables stack well with Dianabol, with partial exception that at higher doses of testosterone Dianabol becomes less useful and eventually entirely unnecessary. 
+                    As examples, at 500 mg/week of testosterone use large improvement in a steroid cycle can be expected from adding Dianabol, but at 1000 mg/week only a moderate improvement is likely. At 2000 mg/week, possibly no noticeable further increase in efficiency will be seen except with individuals who have already reached a plateau at that amount of testosterone-only usage. 
+                    For most this will not be the case.</p>
+            </div>
+            <div class="para">
+                <h2>Dianabol Recommendations</h2>
+                <p>The dosage range for Dianabol is typically 20-50 mg/day. Unlike most injectables, little further benefit occurs from going beyond this milligram amount. If wishing more effect, the answer is instead to add another anabolic steroid. My preference is for dosing to be 3-5 times per day, but some prefer to use it only once per day.
+
+                    Typically, this usage is combined with about 500-1000 mg/week total of injected anabolic steroids.
+                    
+                    As with any anabolic steroid cycle, Dianabol should be followed with PCT (post-cycle therapy) employing Clomid, Nolvadex, or toremifene.</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'verification/assets/js/main.js' %}"></script>
+</body>
+</html>
