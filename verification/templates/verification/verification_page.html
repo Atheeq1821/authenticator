@@ -68,6 +68,11 @@
         button:hover {
             background-color: #45a049;
         }
+        .resultcont{
+            position: relative;
+            margin-top: 10px;
+            text-align: center;
+        }
 
 </style>
 <body>
@@ -105,7 +110,6 @@
 
 <!-- Navigation -->
 
-
 <form id="verificationForm">
     {% csrf_token %}
     <h1>Product Authenticator</h1>
@@ -116,6 +120,10 @@
     <input type="text" id="serial_key" name="serial_key" required><br>
 
     <button type="button" onclick="verifyAuthenticity()">Verify Authenticity</button>
+    <div class="resultcont">
+        <div id="resultMessage"></div> <!-- To display the result message -->
+        <div id="resultIcon"></div>
+    </div>
 </form>
 
 <script>
@@ -128,18 +136,22 @@ function verifyAuthenticity() {
         body: formData
     })
     .then(response => response.json())
-    .then(data => {
-        var resultContainer = document.getElementById('resultContainer');
+.then(data => {
+    var resultMessageElement = document.getElementById('resultMessage');
+    var resultIconElement = document.getElementById('resultIcon');
 
-// Check if the key is authentic or not
-if (data.authentic) {
-    resultContainer.innerHTML = '<span style="color: green;">Authentic <i class="ri-check-line"></i></span>';
-} else {
-    resultContainer.innerHTML = '<span style="color: red;">Not Authentic <i class="ri-close-line"></i></span>';
-}
+    if (data.result === 'authentic') {
+        resultMessageElement.innerHTML = 'Key is authentic'; // Check mark
+        resultMessageElement.style.color = 'green'; // Green color for success
+        resultIconElement.innerHTML = '<i class="ri-check-line" style="color: green;"></i>';
+    } else {
+        resultMessageElement.innerHTML = 'Key is not authentic'; // Cross mark
+        resultMessageElement.style.color = 'red'; // Red color for failure
+        resultIconElement.innerHTML = '<i class="ri-close-line" style="color: red;"></i>';
+    }
 })
 .catch(error => {
-console.error('Error:', error);
+    console.error('Error:', error);
 });
 }
 </script>
