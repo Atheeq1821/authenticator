@@ -129,11 +129,18 @@ function verifyAuthenticity() {
     })
     .then(response => response.json())
     .then(data => {
-        alert(data.result);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        var resultContainer = document.getElementById('resultContainer');
+
+// Check if the key is authentic or not
+if (data.authentic) {
+    resultContainer.innerHTML = '<span style="color: green;">Authentic <i class="ri-check-line"></i></span>';
+} else {
+    resultContainer.innerHTML = '<span style="color: red;">Not Authentic <i class="ri-close-line"></i></span>';
+}
+})
+.catch(error => {
+console.error('Error:', error);
+});
 }
 </script>
 <script>
@@ -143,5 +150,6 @@ function verifyAuthenticity() {
         document.body.style.overflow = 'auto'; // Allow scrolling after splash screen
     }, 3000);
 </script>
+<script src="{% static 'verification/assets/js/main.js' %}"></script>
 </body>
 </html>
