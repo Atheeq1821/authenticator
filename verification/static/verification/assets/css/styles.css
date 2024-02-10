@@ -114,11 +114,11 @@ img {
 
 .section__title-gradient {
   background: var(--text-gradient);
-  color: black;
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  
 }
-
 /*=============== LAYOUT ===============*/
 .main {
   overflow: hidden;
@@ -572,7 +572,7 @@ img {
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 500px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -582,10 +582,11 @@ img {
   }
   .home__img {
     width: 200px;
+    position: static;
     top: -13rem;
   }
   .home__title {
-    top: -4rem;
+    top: -3rem;
     font-size: var(--bigger-font-size);
   }
   .home__data {
@@ -623,6 +624,7 @@ img {
     padding-top: 2rem;
   }
   .home__img {
+    position: static;
     top: -7rem;
     left: 0;
   }
