@@ -41,6 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    user-select: none;
 }
 .overlay .overlay-img{
     width: 25em;
