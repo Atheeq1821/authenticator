@@ -1,7 +1,7 @@
 # verification/views.py
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
-from .models import SerialKey
+from .models import SerialKey,UserKeyUsage
 
 
 def check_and_update_serial_key(serial_key):
@@ -15,7 +15,6 @@ def check_and_update_serial_key(serial_key):
         key_object.delete()
     else:
         key_object.save()
-
     return key_object.used_time
 
 
@@ -27,9 +26,12 @@ def check_serial_key_in_database(serial_key):
     except SerialKey.DoesNotExist:
         return False
 
+
+
+
 def verify_authenticity(request):
     if request.method == 'POST':
-        email = request.POST.get('email', '')
+        phone = request.POST.get('Phone_Number', '')
         serial_key = request.POST.get('serial_key', '')
 
         is_authentic = check_serial_key_in_database(serial_key)
@@ -37,6 +39,9 @@ def verify_authenticity(request):
         if is_authentic:
             used_time = check_and_update_serial_key(serial_key)
             response_data = {'result': 'authentic'}
+            user_key_usage = UserKeyUsage(key=serial_key, phone_number=phone)
+            user_key_usage.save()
+            
         else:
             response_data = {'result': 'not_authentic'}
         

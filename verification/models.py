@@ -9,3 +9,9 @@ class SerialKey(models.Model):
 
     def __str__(self):
         return self.key
+class UserKeyUsage(models.Model):
+    key = models.CharField(max_length=20, unique=True)
+    phone_number = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.phone_number
