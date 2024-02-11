@@ -47,6 +47,8 @@
 .overlay .overlay-img{
     width: 25em;
     opacity: .3;
+    overflow: hidden;
+    user-select: none;
   
 }
 
