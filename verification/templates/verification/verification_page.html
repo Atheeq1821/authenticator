@@ -141,11 +141,11 @@ function verifyAuthenticity() {
     var resultIconElement = document.getElementById('resultIcon');
 
     if (data.result === 'authentic') {
-        resultMessageElement.innerHTML = 'Key is authentic'; // Check mark
+        resultMessageElement.innerHTML = 'Product is authentic'; // Check mark
         resultMessageElement.style.color = 'green'; // Green color for success
         resultIconElement.innerHTML = '<i class="ri-check-line" style="color: green;"></i>';
     } else {
-        resultMessageElement.innerHTML = 'Key is not authentic'; // Cross mark
+        resultMessageElement.innerHTML = 'Product is not authentic'; // Cross mark
         resultMessageElement.style.color = 'red'; // Red color for failure
         resultIconElement.innerHTML = '<i class="ri-close-line" style="color: red;"></i>';
     }
