@@ -136,7 +136,11 @@ img {
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
-
+#home{
+  max-width:100%;
+  width: 100%;
+  margin-left: 25%;
+}
 .grid {
   display: grid;
 }
@@ -247,6 +251,7 @@ img {
   padding-top: 5rem;
 }
 
+
 .home__header {
   position: relative;
 }
@@ -258,10 +263,11 @@ img {
   line-height: 6rem;
   font-family: alpha;
   font-size: var(--biggest-font-size);
-  background: var(--text-gradient);
-  color: transparent;
+  color: rgb(216, 211, 204);
+  /*background: var(--text-gradient);
+    color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text;*/
 }
 
 .home__subtitle {
