@@ -7,28 +7,51 @@
 
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="{% static 'verification/assets/img/overlay.png' %}" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+
         <!--=============== REMIX ICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="{% static 'verification/assets/css/styles.css' %}">
         <link rel="stylesheet" href="{% static 'verification/assets/css/mystyles.css' %}">
-        <title>Hungry Wolf</title>
+        <title>Welcome to Hungry Wolf Pharma</title>
+        <meta name="description" content="Join the Hungry Wolf community today, and let's strive for strength, knowledge, and safety together."/>
+        <meta name="robots" content="index, follow">
+
+        <link rel="alternate" href="https://www.hungrywolfpharma.de/" hreflang="ta-sg"/>
+        <link rel="alternate" href="https://www.hungrywolfpharma.de/sl/" hreflang="ta-lk"/>
+
+        <meta property="og:type" content="product">
+<meta property="og:title" content="Welcome to Hungry Wolf Pharma">
+<meta property="og:url" content="https://www.hungrywolfpharma.de/verification/homepage/">
+<meta property="og:image" content="loading.jpg">
+<meta property="og:description" content="Join the Hungry Wolf community today, and let's strive for strength, knowledge, and safety together.">
+<script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "ExerciseGym",
+      "name": "Hungry Wolf",
+      "url": "https://www.hungrywolfpharma.de/verification/homepage/#homie",
+      "image": "loading.jpg",
+      "description": "We understand the significance of anabolic hormones in various fields including pharmaceuticals, sports performance enhancement, and medical research. Our team of experts, consisting of scientists, researchers, and industry professionals, collaborates tirelessly to develop innovative and safe solutions that meet the ever-evolving needs of our clients.",
+      "openingHours": "Su -"
+    }
+     </script>
+
     </head>
     <body>
         <div class="splash-screen">
-            <img class="splash-image" src="{% static 'verification/img/loading.jpg' %}">
+            <img class="splash-image" src="{% static 'verification/img/loading.jpg' %}" alt="verification">
             <p>Loading...</p>
         </div>
         <div class="overlay">
-            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="overlay-img">
+            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets" class="overlay-img">
         </div>
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
-                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="">
+                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 1">
                 </a>
 
                 <div class="nav__menu" id="nav-menu">
@@ -62,22 +85,22 @@
         <main class="main">
             <!--=============== HOME ===============-->
             <section class="home section" id="home">
-                <div class="home__container  grid">
-                    <!--    <div>
-                    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="" class="home__img">=
-                    </div>-->
+                <div class="home__container container grid">
+                    <!--<div>-->
+                    <!--    <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 2" class="home__img">-->
+                    <!--</div>-->
 
                     <div class="home__data">
                         <div class="home__header">
-                            <h1 class="home__title">Hungry</h1>
+                            <h1 class="home__title">Hungry </h1>
                             <h2 class="home__subtitle">Wolf</h2>
                         </div>
 
-                        <div class="home__footer">
+                        <div class="home_">
                             <h3 class="home__title-description">Overview</h3>
                             <p class="home__description">Join the Hungry Wolf community today, and let's strive for strength, knowledge, and safety together.
                             </p>
-                            <a href="#products" class="button button--flex">
+                            <a href="#" class="button button--flex">
                                 <span class="button--flex">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </span>
@@ -95,11 +118,11 @@
 
                 <div class="case__container container grid">
                     <div>
-                        <img src="{% static 'verification/assets/img/demo.jpg' %}" alt="" class="case__img">
+                        <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 3" class="case__img">
                     </div>
 
                     <div class="case__data">
-                        <p class="case__description">We understand the significance of anabolic hormones in various fields including
+                        <p class="case__description">we understand the significance of anabolic hormones in various fields including
                             pharmaceuticals, sports performance enhancement, and medical research. Our team of experts, consisting of scientists, researchers, and industry professionals,
                             collaborates tirelessly to develop innovative and safe solutions that meet the ever-evolving needs of our clients.
                         </p>
@@ -124,16 +147,16 @@
                 </div>
             </section>===============-->
 
-            <!--=============== PRODUCTS ===============-->
+            <!--=============== ORALS===============-->
             <section class="products section" id="products">
                 <h2 class="section__title section__title-gradient products__line">
-                    Choose <br> Your Products
+                    Choose <br> Your Orals
                 </h2>
 
                 <div class="products__container container grid">
                     <article class="products__card">
                         <div class="products__content">
-                            <img src="{% static 'verification/assets/img/dinabol.png' %}" alt="" class="products__img">
+                            <img src="{% static 'verification/assets/img/dinabol.png' %}" alt="verification assets 4" class="products__img">
 
                             <h3 class="products__title">Dianabol</h3>
                             <span class="products__price">View</span>
@@ -146,7 +169,7 @@
                     </article>
                     <article class="products__card">
                         <div class="products__content">
-                            <img src="{% static 'verification/assets/img/anavar.png' %}" alt="" class="products__img">
+                            <img src="{% static 'verification/assets/img/anavar.png' %}" alt="verification assets 5" class="products__img">
 
                             <h3 class="products__title">Anavar</h3>
                             <span class="products__price">View</span>
@@ -159,7 +182,7 @@
                     </article>
                     <article class="products__card">
                         <div class="products__content">
-                            <img src="{% static 'verification/assets/img/win.png' %}" alt="" class="products__img">
+                            <img src="{% static 'verification/assets/img/win.png' %}" alt="verification assets 6" class="products__img">
 
                             <h3 class="products__title">Winstrol</h3>
                             <span class="products__price">View</span>
@@ -172,7 +195,7 @@
                     </article>
                     <article class="products__card">
                         <div class="products__content">
-                            <img src="{% static 'verification/assets/img/clen.png' %}" alt="" class="products__img">
+                            <img src="{% static 'verification/assets/img/clen.png' %}" alt="verification assets 7" class="products__img">
 
                             <h3 class="products__title">Clenbuterol</h3>
                             <span class="products__price">View</span>
@@ -186,11 +209,142 @@
 
                     <article class="products__card">
                         <div class="products__content">
-                            <img src="{% static 'verification/assets/img/anadrol.png' %}" alt="" class="products__img">
+                            <img src="{% static 'verification/assets/img/anadrol.png' %}" alt="verification assets 8" class="products__img">
 
                             <h3 class="products__title">Anadrol 50</h3>
                             <span class="products__price">View</span>
                             <a href="{% url 'verification:anadrol' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+
+            <!--=============== INJECTABLES ===============-->
+            <section class="products section" id="products">
+                <h2 class="section__title section__title-gradient products__line">
+                    Choose <br> Your Injectables
+                </h2>
+
+                <div class="products__container container grid">
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 4" class="products__img">
+
+                            <h3 class="products__title">DECA 250</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:deca' %}">
+                                <button class="button button--flex products__button" id="1">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 5" class="products__img">
+
+                            <h3 class="products__title">EQUIPOISE 250</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:bold' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">WIN 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:winstrol' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 7" class="products__img">
+
+                            <h3 class="products__title">MAST 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:mast' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 8" class="products__img">
+
+                            <h3 class="products__title">PRIM 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:prime' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 5" class="products__img">
+
+                            <h3 class="products__title">SUSTA 250</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:susta' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">T- CYP 250</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:tcyp' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 7" class="products__img">
+
+                            <h3 class="products__title">TREN-A 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:trena' %}">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 8" class="products__img">
+
+                            <h3 class="products__title">T-PROP 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:tpro' %}">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>

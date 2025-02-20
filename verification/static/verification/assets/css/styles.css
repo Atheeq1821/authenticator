@@ -124,7 +124,7 @@ img {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  
+
 }
 /*=============== LAYOUT ===============*/
 .main {
@@ -136,7 +136,7 @@ img {
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
-#home{
+#homie{
   max-width:100%;
   width: 100%;
   margin-left: 25%;
@@ -617,7 +617,7 @@ img {
     position: relative;
     display: flex;
     flex-direction: column;
-  
+
   }
   .products__img{
     bottom: 12px;
