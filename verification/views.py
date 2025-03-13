@@ -1,8 +1,9 @@
 # verification/views.py
 from django.shortcuts import render, get_object_or_404
-from django.http import JsonResponse
+from django.http import JsonResponse,Http404,HttpResponse
 from .models import SerialKey
-
+import io
+import csv
 
 def check_and_update_serial_key(serial_key):
     key_object = get_object_or_404(SerialKey, key=serial_key, used_time__lt=2)
@@ -18,6 +19,32 @@ def check_and_update_serial_key(serial_key):
 
     return key_object.used_time
 
+def openAddKeys(request):
+    return render(request, 'verification/addKeys.html',{"message":""})
+
+def appendKeys(request):
+    if request.method=="POST" and request.FILES.get("csv_file"):
+        csv_file = request.FILES["csv_file"]
+        data = csv.reader(io.StringIO(csv_file.read().decode("utf-8")))
+        for row in data:
+            k = row[0]
+            SerialKey.objects.get_or_create(key=k)
+        return render(request, 'verification/addKeys.html',{"message":"Successfully Added keys from the file"})
+    return render(request, 'verification/addKeys.html',{"message":""})
+
+def replaceKeys(request):
+    if request.method=="POST" and request.Files.get("csv_file"):
+        SerialKey.objects.all().delete()
+        csv_file = request.FILES["csv_file"]
+        data = csv.reader(io.StringIO(csv_file.read().decode("utf-8")))
+        i=0
+        for row in data:
+            if i!=0:
+                k = row[0]
+                SerialKey.objects.get_or_create(key=k)
+            i+=1
+        return render(request, 'verification/addKeys.html',{"message":"Succesfully replaced the keys from the file"})
+    return render(request, 'verification/addKeys.html',{"message":""})
 
 def check_serial_key_in_database(serial_key):
     try:
@@ -39,7 +66,7 @@ def verify_authenticity(request):
             response_data = {'result': 'authentic'}
         else:
             response_data = {'result': 'not_authentic'}
-        
+
         return JsonResponse(response_data)
 
     return render(request, 'verification/verification_page.html')
@@ -55,21 +82,17 @@ def winr(request):
     return render(request,'verification/winr.html')
 def anadrol(request):
     return render(request,'verification/anadrol.html')
-def deca(request):
-    return render(request,'verification/deca.html')
-def bold(request):
-    return render(request,'verification/bold.html')
-def winstrol(request):
-    return render(request,'verification/winstrol.html')
-def mast(request):
-    return render(request,'verification/mast.html')
-def prime(request):
-    return render(request,'verification/prime.html')
-def susta(request):
-    return render(request,'verification/susta.html')
-def trena(request):
-    return render(request,'verification/trena.html')
-def tcyp(request):
-    return render(request,'verification/tcyp.html')
-def tpro(request):
-    return render(request,'verification/tpro.html')
+
+
+def loadProduct(request):
+    product_name = request.GET.get('product', '')
+
+    if product_name:
+        template_name = f"verification/{product_name}.html"
+        try:
+            return render(request, template_name)
+        except Exception:
+
+            raise Http404("Page not found")
+    else:
+        return HttpResponse("Invalid request")

@@ -1,0 +1,20 @@
+{% extends "admin/index.html" %}
+
+{% block sidebar %}
+    {{ block.super }}  <!-- Keep the default sidebar -->
+    
+    <div style="margin: 10px; padding: 10px; ">
+        <a href="{% url 'verification:openAddKeys' %}" class="button" style="
+            display: block;
+            padding: 10px;
+            /* height: 20px; */
+            text-align: center;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 300px;
+        ">Add Keys</a>
+    </div>
+{% endblock %}

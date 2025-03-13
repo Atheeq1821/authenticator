@@ -238,7 +238,7 @@
 
                             <h3 class="products__title">DECA 250</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:deca' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=deca">
                                 <button class="button button--flex products__button" id="1">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
@@ -249,9 +249,9 @@
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 5" class="products__img">
 
-                            <h3 class="products__title">EQUIPOISE 250</h3>
+                            <h3 class="products__title">EQ (Boldenone)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:bold' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=bold">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
@@ -262,9 +262,9 @@
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
 
-                            <h3 class="products__title">WIN 100</h3>
+                            <h3 class="products__title">WIN-X (Stanozolol)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:winstrol' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=winstrol">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
@@ -275,9 +275,9 @@
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 7" class="products__img">
 
-                            <h3 class="products__title">MAST 100</h3>
+                            <h3 class="products__title">MASTERON-P (Masteron Propionate)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:mast' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=mast">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
@@ -289,48 +289,51 @@
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 8" class="products__img">
 
-                            <h3 class="products__title">PRIM 100</h3>
+                            <h3 class="products__title">PRIME ACE 100 (Primobolan Acetate)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:prime' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=prime">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
                             </a>
                         </div>
                     </article>
+
                     <article class="products__card">
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 5" class="products__img">
 
-                            <h3 class="products__title">SUSTA 250</h3>
+                            <h3 class="products__title">SUSTEX (Sustanon)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:susta' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=susta">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
                             </a>
                         </div>
                     </article>
+
                     <article class="products__card">
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
 
-                            <h3 class="products__title">T- CYP 250</h3>
+                            <h3 class="products__title">TEST-C (Testosterone Cypionate)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:tcyp' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=tcyp">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
                             </a>
                         </div>
                     </article>
+
                     <article class="products__card">
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 7" class="products__img">
 
-                            <h3 class="products__title">TREN-A 100</h3>
+                            <h3 class="products__title">Tren-A (Trenbolone Acetate)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:trena' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=trena">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
@@ -342,15 +345,89 @@
                         <div class="products__content">
                             <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 8" class="products__img">
 
-                            <h3 class="products__title">T-PROP 100</h3>
+                            <h3 class="products__title">TPRO (Test Propionate)</h3>
                             <span class="products__price">View</span>
-                            <a href="{% url 'verification:tpro' %}">
+                            <a href="{% url 'verification:loadProduct' %}?product=tpro">
                                 <button class="button button--flex products__button">
                                     <i class="ri-shopping-bag-line button__icon"></i>
                                 </button>
                             </a>
                         </div>
                     </article>
+
+                    <!--New content-->
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">Cutmix 300</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:loadProduct' %}?product=cutmix">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">Bulkmix 400</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:loadProduct' %}?product=blukmix">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">Tren-E 200</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:loadProduct' %}?product=trene">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">T-ENA 250</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:loadProduct' %}?product=tena">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="products__card">
+                        <div class="products__content">
+                            <img src="{% static 'verification/assets/img/overlay.png' %}" alt="verification assets 6" class="products__img">
+
+                            <h3 class="products__title">NPP 100</h3>
+                            <span class="products__price">View</span>
+                            <a href="{% url 'verification:loadProduct' %}?product=npp">
+                                <button class="button button--flex products__button">
+                                    <i class="ri-shopping-bag-line button__icon"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!--new content-->
                 </div>
             </section>
         </main>

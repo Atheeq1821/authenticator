@@ -1,0 +1,42 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# SQLite temporary files (but NOT the main database)
+*.sqlite3-shm
+*.sqlite3-wal
+db.sqlite3-journal
+
+# Media / Static files (optional, if using remote storage)
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+env/
+*.venv
+Pipfile
+Pipfile.lock
+
+# VSCode & JetBrains IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS & Linux system files
+.DS_Store
+*.swp
+*.swo
+*.swn
+
+# Security: Ignore environment files containing secrets
+.env
+*.env
